@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { IssuesItem } from "./IssuesItem";
+import { IssueItem } from "./IssueItem";
 
 export default function IssuesList() {
 	const issuesQuery = useQuery(["issues"], fetchData);
@@ -14,7 +14,7 @@ export default function IssuesList() {
 			) : (
 				<ul className='issues-list'>
 					{issuesQuery.data.map((issue) => (
-						<IssuesItem
+						<IssueItem
 							key={issue.id}
 							title={issue.title}
 							number={issue.number}
