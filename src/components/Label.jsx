@@ -1,4 +1,4 @@
-import { useLabelsData } from "../helpers/useLabelsData";
+import { useLabelsData } from "../hooks";
 
 export function Label({ label }) {
 	const labelsQuery = useLabelsData();

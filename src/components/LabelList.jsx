@@ -1,4 +1,4 @@
-import { useLabelsData } from "../helpers/useLabelsData";
+import { useLabelsData } from "../hooks";
 
 export default function LabelList({ selected, toggle }) {
 	const labelsQuery = useLabelsData();
