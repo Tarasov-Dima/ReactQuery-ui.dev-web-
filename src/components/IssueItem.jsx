@@ -3,6 +3,7 @@ import { GoIssueOpened, GoIssueClosed, GoComment } from "react-icons/go";
 import { relativeDate } from "../helpers/relativeDate";
 import { useUserData } from "../hooks";
 import { Label } from "./Label";
+import { statusDoneOrCancelled } from "../helpers/utils";
 
 export function IssueItem(props) {
 	const {
@@ -20,7 +21,7 @@ export function IssueItem(props) {
 	return (
 		<li>
 			<div>
-				{status === "done" || status === "canceled" ? (
+				{statusDoneOrCancelled(status) ? (
 					<GoIssueClosed style={{ color: "red" }} />
 				) : (
 					<GoIssueOpened style={{ color: "green" }} />
