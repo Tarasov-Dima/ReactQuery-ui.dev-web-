@@ -2,7 +2,6 @@ import { useLabelsData } from "../hooks";
 
 export function Label({ label }) {
 	const labelsQuery = useLabelsData();
-	console.log(labelsQuery.data);
 	if (labelsQuery.isLoading) return null;
 	const labelObj = labelsQuery.data.find(
 		(queryLabel) => queryLabel.id === label
