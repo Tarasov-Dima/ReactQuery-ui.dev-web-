@@ -16,11 +16,12 @@ export default function Issues() {
 	function setCurrentStatus(event) {
 		setStatus(event.target.value);
 	}
+	const title = "Issues";
 	return (
 		<div>
 			<main>
 				<section>
-					<h1>Issues</h1>
+					<h1>{title}</h1>
 					<IssuesList labels={labels} status={status} />
 				</section>
 				<aside>
